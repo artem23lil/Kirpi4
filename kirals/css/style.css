@@ -1,0 +1,313 @@
+/* Общие стили */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f4f4f4;
+    line-height: 1.6;
+}
+
+/* Стили для шапки */
+header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    background-color: #4A90E2; 
+    padding: 2rem 5%; 
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+header .logo img {
+    height: 80px; 
+}
+
+nav ul {
+    list-style: none;
+    display: flex;
+    gap: 2rem; 
+}
+
+nav ul li {
+    margin-left: 2rem;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 1.1rem;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+    color: #FFC107; 
+}
+
+/* Стили для hero секции */
+.hero {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('../assets/images/slider1.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 500px; 
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    text-align: center;
+    position: relative;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+}
+
+.hero h1 {
+    font-size: 3.5rem;
+    margin-bottom: 1rem;
+    letter-spacing: 1.5px;
+    text-transform: uppercase;
+}
+
+.hero p {
+    font-size: 1.5rem;
+    letter-spacing: 1.2px;
+}
+
+.hero-slider {
+    display: none; 
+}
+/* Стиль для секции с описанием завода */
+.about-factory {
+    padding: 4rem 5%;
+    background-color: #f4f4f4;
+    margin-top: 2rem;
+}
+
+.about-factory-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.factory-image {
+    max-width: 600px;
+    width: 100%;
+    height: auto;
+    margin-right: 2rem;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+.factory-description {
+    max-width: 600px;
+    text-align: left;
+}
+
+.factory-description h2 {
+    font-size: 2.5rem;
+    margin-bottom: 1.5rem;
+    color: #333;
+}
+
+.factory-description p {
+    font-size: 1.2rem;
+    line-height: 1.6;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+
+/* Продукция */
+.products {
+    padding: 4rem 5%; 
+    background-color: #fff;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.05); 
+    margin-top: -50px; 
+    border-radius: 10px; 
+}
+
+.products h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+    color: #333;
+}
+
+.product-grid {
+    display: flex;
+    justify-content: space-around;
+    gap: 2rem;
+}
+
+.product-item {
+    width: 300px;
+    text-align: center;
+    background-color: #fff;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1); 
+    padding: 2rem;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-item:hover {
+    transform: translateY(-10px); 
+    box-shadow: 0px 8px 20px rgba(0, 0, 0, 0.15);
+}
+
+.product-item img {
+    max-width: 100%;
+    height: auto;
+    margin-bottom: 1rem;
+}
+
+.product-item h3 {
+    font-size: 1.8rem;
+    margin-bottom: 1rem;
+}
+
+.product-item p {
+    font-size: 1rem;
+    margin-bottom: 1.5rem;
+    color: #666;
+}
+
+.btn {
+    background-color: #FFC107;
+    color: white;
+    padding: 0.75rem 1.5rem;
+    border-radius: 5px;
+    text-decoration: none;
+    transition: background-color 0.3s ease;
+}
+
+.btn:hover {
+    background-color: #FFB300;
+}
+
+/* Видео */
+.video {
+    padding: 4rem 5%;
+    text-align: center;
+    background-color: #f9f9f9;
+}
+
+.video h2 {
+    margin-bottom: 2rem;
+    font-size: 2.5rem;
+}
+
+.video video {
+    max-width: 80%;
+    border-radius: 10px;
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.1);
+}
+
+/* Отзывы */
+.reviews {
+    padding: 4rem 5%;
+    background-color: #fff;
+    margin-top: 2rem;
+}
+
+.reviews h2 {
+    text-align: center;
+    font-size: 2.5rem;
+    margin-bottom: 3rem;
+}
+
+/* Контейнер для слайдера отзывов */
+.review-slider {
+    display: flex;
+    align-items: center;
+    position: relative;
+    padding: 0 50px;
+}
+
+.review-container {
+    overflow: hidden;
+    width: 100%; /* Растягиваем контейнер */
+    max-width: 1000px; /* Ограничиваем максимальную ширину */
+}
+
+.review-track {
+    display: flex;
+    transition: transform 0.5s ease;
+}
+
+.review-item {
+    background-color: #f9f9f9;
+    border: 2px solid #ddd;
+    border-radius: 10px;
+    padding: 2rem;
+    width: 300px; /* Ширина одного отзыва */
+    margin: 0 1rem;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+.review-item img {
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+    margin-bottom: 1.5rem;
+}
+
+.review-content {
+    text-align: center;
+}
+
+.review-content p {
+    font-size: 1rem;
+    font-style: italic;
+    color: #555;
+    margin-bottom: 1rem;
+}
+
+.review-content h4 {
+    font-size: 1.2rem;
+    font-weight: bold;
+    color: #333;
+}
+
+/* Слайдер будет показывать только три отзыва */
+.review-container {
+    width: calc(300px * 3 + 2rem * 2); /* Ширина контейнера для 3 отзывов */
+}
+
+
+
+/* Футер */
+footer {
+    background-color: #333;
+    color: white;
+    padding: 2rem 5%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+}
+
+footer h3 {
+    font-size: 1.5rem;
+}
+
+footer p {
+    margin-bottom: 0.5rem;
+}
+
+footer .social a {
+    color: white;
+    text-decoration: none;
+    margin-right: 1rem;
+    transition: color 0.3s ease;
+}
+
+footer .social a:hover {
+    color: #FFC107;
+}
